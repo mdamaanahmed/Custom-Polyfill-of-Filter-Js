@@ -1,10 +1,10 @@
 const numbers = [1, 2, 3, 4];
 
-const defaultMap = numbers.filter((item, index) => {
+const defaultFilter = numbers.filter((item, index) => {
   return item > 2;
 });
 
-console.log("defaultMap: ", defaultMap);
+console.log("defaultFilter: ", defaultFilter);
 
 Array.prototype.customFilter = function (fn) {
   const arr = [];
@@ -14,8 +14,8 @@ Array.prototype.customFilter = function (fn) {
   return arr;
 };
 
-const customMap = numbers.customFilter((item, index) => {
+const customFilter = numbers.customFilter((item, index) => {
   return item > 2;
 });
 
-console.log("customMap: ", customMap);
+console.log("customFilter: ", customFilter);
